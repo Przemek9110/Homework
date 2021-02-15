@@ -12,12 +12,12 @@ public class Converter {
             String miles = readValue();
             miles = valueCheck(miles);
 
-            System.out.printf(miles + " mi \u2248 %.2f km", convert(miles));
+            System.out.printf(miles + " mi \u2248 %.2f km\n", convert(miles));
         } else {
             String miles = args[0];
             miles = valueCheck(miles);
 
-            System.out.printf(miles + " mi \u2248 %.2f km", convert(miles));
+            System.out.printf(miles + " mi \u2248 %.2f km\n", convert(miles));
         }
     }
 
