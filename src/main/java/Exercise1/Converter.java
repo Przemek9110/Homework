@@ -6,18 +6,17 @@ public class Converter {
 
     public static void main(String[] args) {
 
-        if (args.length != 1) {
+        if (args.length > 0) {      //miles provided by run configuration
+            for (String miles : args) {
+                miles = valueCheck(miles);
+                    System.out.println();
+                    System.out.printf(miles + " mi \u2248 %.2f km\n", convert(miles));
+            }
+        } else {                //number enter from keyboard
             System.out.print("Please enter miles: ");
-
             String miles = readValue();
             miles = valueCheck(miles);
-
-            System.out.printf(miles + " mi \u2248 %.2f km\n", convert(miles));
-        } else {
-            String miles = args[0];
-            miles = valueCheck(miles);
-
-            System.out.printf(miles + " mi \u2248 %.2f km\n", convert(miles));
+                System.out.printf(miles + " mi \u2248 %.2f km\n", convert(miles));
         }
     }
 
