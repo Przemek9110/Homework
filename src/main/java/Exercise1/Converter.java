@@ -25,9 +25,10 @@ public class Converter {
         Scanner scanner = new Scanner(System.in);
         return scanner.next();
     }
-    public static double convert (String miles) {
+
+    public static double convert(String miles) {
         double formattedMiles = Double.parseDouble(miles);
-        return formattedMiles* 1.609344;
+        return formattedMiles * 1.609344;
     }
 
     public static String valueCheck(String miles) {
